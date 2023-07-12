@@ -3,6 +3,7 @@
 import discord
 from rcon import rcon
 from os import getenv
+from os import system
 from dotenv import load_dotenv
 from json import load
 
@@ -64,6 +65,10 @@ async def send_rcon(cmd, args, message):
         await message.channel.send(resp)
         print (f'{resp}')
 
+# Send set list of linux commands for checking server status
+async def send_server_cmd(cmd):
+    try:
+        
 
 # Process message when received
 @client.event
